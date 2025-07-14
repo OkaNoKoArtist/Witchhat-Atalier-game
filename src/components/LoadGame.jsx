@@ -1,8 +1,18 @@
-export function loadGame({setPage}) {
+export function LoadGame({setPage}) {
     return(
         <div>
-          <h2 className="text-xl">Load Game Screen</h2>
-          <button onClick={() => setPage('start')}>Back</button>
+          <br></br>
+          <div className='group'>
+            <button className="text-black group-hover:text-white" onClick={() => setPage('storyMode')}>Story mode</button> 
+          </div>
+          <br></br>
+          <div className='group'>
+            <button className="text-black group-hover:text-white" onClick={() => setPage('littleAtalier')}>Little atalier</button>
+          </div>
+          <br></br>
+          <div className='group'>
+            <button className="text-black group-hover:text-white" onClick={() => setPage('competetiveChallenges')}>Competetive challenges</button>
+          </div>
         </div>
     )
 }
