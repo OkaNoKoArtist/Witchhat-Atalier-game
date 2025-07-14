@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import {Start} from'./components/Start'
+import {NewGame} from'./components/NewGame'
+import {LoadGame} from'./components/LoadGame'
 
 function App() {
   const [page, setPage] = useState('start');
@@ -7,36 +10,16 @@ function App() {
   return(
     <div className='p-10 font-sans'>
       {page === 'start' && (
-        <div>
-          <h1 className='text-center text-2xl font-bold text-gray-900 italic dark:text-white'>Witchhat Atalier:
-            <span class="ml-2 relative inline-block before:absolute before:-inset-1 before:block before:skew-y-1 before:bg-yellow-500">
-              <span class="relative text-white dark:text-gray-950">the game</span>
-            </span>
-          </h1>
-          <br></br>
-          <div className='group'>
-            <button className="text-black group-hover:text-white" onClick={() => setPage('newGame')}>New game</button> 
-          </div>
-          <br></br>
-          <div className='group'>
-            <button className="text-black group-hover:text-white" onClick={() => setPage('loadGame')}>Load game</button>
-          </div>
-        </div>
+        <Start setPage={setPage} />
         )}
 
-        {page === 'newGame' && (
-        <div>
-          <h2 className="text-xl">New Game Screen</h2>
-          <button onClick={() => setPage('start')}>Back</button>
-        </div>
-        )}
+      {page === 'newGame' && (
+        <NewGame setPage={setPage} />
+      )}
 
       {page === 'loadGame' && (
-        <div>
-          <h2 className="text-xl">Load Game Screen</h2>
-          <button onClick={() => setPage('start')}>Back</button>
-        </div>
-        )}
+        <LoadGame setPage={setPage} />
+      )}
     </div>
   );
 }
