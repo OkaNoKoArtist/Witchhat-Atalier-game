@@ -4,7 +4,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: none;
   background-color: rgb(33, 72, 59);
 }
 
@@ -14,4 +14,8 @@ button{
 
 .TitleInY{
   color: black;
+}
+
+.middle{
+  text-align: center;
 }

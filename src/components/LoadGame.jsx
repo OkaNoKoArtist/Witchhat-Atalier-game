@@ -1,6 +1,6 @@
 export function LoadGame({setPage}) {
     return(
-        <div>
+        <div className="middle">
           <br></br>
           <div className='group'>
             <button className="text-black group-hover:text-white" onClick={() => setPage('storyMode')}>Story mode</button> 
